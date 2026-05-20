@@ -1,0 +1,36 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.16.1.255:3000
+✓ Ready in 324ms
+
+ GET / 200 in 2.0s (next.js: 1935ms, application-code: 99ms)
+ GET / 200 in 35ms (next.js: 4ms, application-code: 31ms)
+✓ Compiled in 7ms
+✓ Compiled in 4ms
+✓ Compiled in 6ms
+✓ Compiled in 8ms
+✓ Compiled in 14ms
+✓ Compiled in 4ms
+[browser] TypeError: Failed to fetch
+    at fetchNotas (src/app/page.tsx:28:5)
+    at Home.useEffect (src/app/page.tsx:45:5)
+  26 |
+  27 |   const fetchNotas = () => {
+> 28 |     fetch('http://localhost:8000/api/notas')
+     |     ^
+  29 |       .then(res => {
+  30 |         if (!res.ok) throw new Error('Erro ao carregar as notas');
+  31 |         return res.json(); (src/app/page.tsx:38:17)
+[browser] TypeError: Failed to fetch
+    at handleFileUpload (src/app/page.tsx:58:30)
+  56 |
+  57 |     try {
+> 58 |       const response = await fetch('http://localhost:8000/api/upload', {
+     |                              ^
+  59 |         method: 'POST',
+  60 |         body: formData,
+  61 |       }); (src/app/page.tsx:68:15)
